@@ -1,1 +1,173 @@
+:root {
+    --spotify-green: #1db954;
+    --dark-base: #121212;
+    --dark-surface: #181818;
+    --glass: rgba(255, 255, 255, 0.05);
+}
 
+body {
+    background-color: var(--dark-base);
+    color: white;
+    font-family: 'Circular', 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+/* Estilo de la Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--dark-surface);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--glass);
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.paso h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    background: var(--glass);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--spotify-green);
+}
+
+button {
+    background: var(--spotify-green);
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* Tarjetas Pro */
+.spotify-card {
+    background: linear-gradient(180deg, #282828 0%, #181818 100%);
+    padding: 16px;
+    border-radius: 12px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.spotify-card img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Centrado del Hero */
+.hero-section {
+    height: 40vh;
+    /* Ocupa el 40% de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-principal-centrado {
+    background: var(--spotify-green);
+    color: black;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(29, 185, 84, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-principal-centrado:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(29, 185, 84, 0.5);
+}
+
+/* Sección Colecciones */
+.colecciones-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.colecciones-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 5px solid var(--spotify-green);
+    padding-left: 15px;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--glass), transparent);
+    margin: 0;
+}
+
+/* Ajuste de la Grid para que se vea ordenada */
+.grid-musica {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    /* Centra las tarjetas en su celda */
+}
+
+.progress-container {
+    width: 100%;
+    background: #333;
+    height: 4px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    width: 33%;
+    height: 100%;
+    background: #1db954;
+    transition: 0.3s;
+}
+
+.img-container {
+    background: #282828;
+    min-height: 180px;
+}
