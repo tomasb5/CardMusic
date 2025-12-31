@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CardMusic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="app-container">
+    <header>
+      <div class="app-container">
+        <section class="hero-section">
+          <!--<h1>Music Lab 🎵</h1>
+          <p>Crea tu colección personal de hits</p> -->
+          <button id="btnIniciar" class="btn-principal-centrado">Crear Nueva Card</button>
+        </section>
+
+        <hr class="divisor">
+
+        <section class="colecciones-section">
+          <h2>Mi Colección</h2>
+          <div id="galeriaMusica" class="grid-musica">
+          </div>
+        </section>
+    </header>
+
+    <div id="modalPasos" class="modal oculto">
+      <div class="modal-content">
+        <div id="paso1" class="paso">
+          <h2>¿Cómo se llama la cancion?</h2>
+          <input type="text" id="inputCancion" placeholder="Ej: Bohemian Rhapsody">
+          <button onclick="siguientePaso(2)">Siguiente →</button>
+        </div>
+
+        <div id="paso2" class="paso oculto">
+          <h2>¿Quién es el artista?</h2>
+          <input type="text" id="inputArtista" placeholder="Ej: Queen">
+          <button onclick="siguientePaso(3)">Siguiente →</button>
+        </div>
+
+        <div id="paso3" class="paso oculto">
+          <h2>Pegá la URL de la portada</h2>
+          <input type="text" id="inputPortada" placeholder="https://imagen-del-album.jpg">
+          <button id="btnFinalizar">Generar Card ✨</button>
+        </div>
+      </div>
+    </div>
+
+    <main id="galeriaMusica" class="grid-musica"></main>
+  </div>
+
+
+  <div id="modalPasos" class="modal oculto">
+  </div>
+  </div>
+
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
